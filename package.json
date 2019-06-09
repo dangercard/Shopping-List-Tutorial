@@ -4,8 +4,11 @@
   "description": "Practicing MERN stack",
   "main": "server.js",
   "scripts": {
+    "client-install":"yarn --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "Alejandro Deloach",
   "license": "MIT",
